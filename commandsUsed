@@ -1,0 +1,51 @@
+To download teacup-code folder:
+hg clone http://hg.code.sf.net/p/teacup/code teacup-code
+
+To build image : 
+sudo docker build --rm -t imageName .
+
+To show all the running containers:
+sudo docker ps -a
+
+To show all images : 
+sudo docker images
+
+To remove dangling images :
+sudo docker rmi $(sudo docker images -f "dangling=true" -q)
+
+To rename docker images:
+sudo docker tag <image tag> <name>
+
+To save the docker container:
+docker save -o </path/name.tar> container_name 
+docker save -o teacup.tar my_project
+
+To load from exiting .tar docker container:
+docker load -i teacup.tar
+
+MANUALLY RUN AND COMMIT TO IMAGE : 
+
+1) tar -xvzf httperf-0.8-mod.tar.gz
+cd httperf-0.8-mod/
+./configure
+
+Modify the make file as given below:
+INCLUDES = -I$(top_srcdir)/include -I$(top_builir) -I$ (top_srcdir) -I$
+(top_srcdir)/lib -I/usr/kerberos/include
+to 
+INCLUDES =-I$(top_srcdir)
+Again apply make :
+make
+make install
+
+
+Script commands used:
+
+Making shell scripts executable:
+chmod 755 <file.sh>
+
+To replace statements inside files.
+sed -i 's/<what to replace>/<replace by what>' <path to the file>
+
+To install online packages through commandline.
+wget <link>

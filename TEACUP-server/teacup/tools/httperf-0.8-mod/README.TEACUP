@@ -1,0 +1,12 @@
+This is a modified version of httperf 0.8 modified by University of Waterloo
+(http://cs.uwaterloo.ca/~brecht/papers/nossdav-2012/httperf.tgz) for
+CAIA's TCP Experiment Automation Controlled Using Python (TEACUP) 
+(http://www.caia.swin.edu.au/tools/teacup).
+
+For TEACUP we made the following modifications:
+- print statistics if TERM signal received 
+- print timestamps when requests were sent in call stats
+- modified pace_time: if previous request took longer than pace_time, 
+  send current request immediatly (don't wait another pace_time)
+
+Author: Sebastian Zander (szander@swin.edu.au)

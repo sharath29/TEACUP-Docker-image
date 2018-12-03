@@ -1,0 +1,6 @@
+[patterns]
+**.py = LF
+**.lyx = native
+
+[repository]
+native = CRLF

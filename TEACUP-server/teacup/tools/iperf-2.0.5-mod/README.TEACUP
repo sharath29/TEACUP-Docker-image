@@ -1,0 +1,10 @@
+This is a patched version of iperf 2.0.5 
+for CAIA's TCP Experiment Automation Controlled Using Python (TEACUP) 
+(http://www.caia.swin.edu.au/tools/teacup).
+
+The patched version allows to set the send and receive socket buffer sizes
+with the command line options -j and -k. The patch was developed in CAIA's
+NewTCP project and can be downloaded from:
+http://www.caia.swin.edu.au/urp/newtcp/tools/
+
+Author: Sebastian Zander (szander@swin.edu.au)

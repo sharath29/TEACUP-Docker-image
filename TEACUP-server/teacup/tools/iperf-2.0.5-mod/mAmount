@@ -1,0 +1,132 @@
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mUDPRate = byte_atoi(outarg);
+src/mAmount:Settings.cpp:                mExtSettings->mBufLen = kDefault_UDPBufLen;
+src/mAmount:Settings.cpp:            mExtSettings->mHost = new char[ strlen( optarg ) + 1 ];
+src/mAmount:Settings.cpp:            strcpy( mExtSettings->mHost, optarg );
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode == kMode_Unknown ) {
+src/mAmount:Settings.cpp:                SockAddr_setHostname( mExtSettings->mHost, &temp,
+src/mAmount:Settings.cpp:                mExtSettings->mThreadMode = kMode_Client;
+src/mAmount:Settings.cpp:                mExtSettings->mThreads = 1;
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mMode = kTest_DualTest;
+src/mAmount:Settings.cpp:            mExtSettings->mMode = kTest_TradeOff;
+src/mAmount:Settings.cpp:            mExtSettings->mFormat = (*optarg);
+src/mAmount:Settings.cpp:            mExtSettings->mInterval = atof( optarg );
+src/mAmount:Settings.cpp:            if ( mExtSettings->mInterval < 0.5 ) {
+src/mAmount:Settings.cpp:                fprintf (stderr, report_interval_small, mExtSettings->mInterval);
+src/mAmount:Settings.cpp:                mExtSettings->mInterval = 0.5;
+src/mAmount:Settings.cpp:            mExtSettings->mBufLen = byte_atoi( outarg );
+src/mAmount:Settings.cpp:                 if ( mExtSettings->mBufLen < (int) sizeof( client_hdr ) &&
+src/mAmount:Settings.cpp:                if ( mExtSettings->mBufLen < (int) sizeof( UDP_datagram ) ) {
+src/mAmount:Settings.cpp:                    mExtSettings->mBufLen = sizeof( UDP_datagram );
+src/mAmount:Settings.cpp:                    fprintf( stderr, warn_buffer_too_small, mExtSettings->mBufLen );
+src/mAmount:Settings.cpp:                            mExtSettings->mBufLen < (int) ( sizeof( UDP_datagram )
+src/mAmount:Settings.cpp:            mExtSettings->mAmount = byte_atoi( outarg );
+src/mAmount:Settings.cpp:            mExtSettings->mOutputFileName = new char[strlen(optarg)+1];
+src/mAmount:Settings.cpp:            strcpy( mExtSettings->mOutputFileName, optarg);
+src/mAmount:Settings.cpp:            mExtSettings->mPort = atoi( optarg );
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mMode = kTest_TradeOff;
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Unknown ) {
+src/mAmount:Settings.cpp:            mExtSettings->mThreadMode = kMode_Listener;
+src/mAmount:Settings.cpp:            mExtSettings->mAmount = (int) (atof( optarg ) * 100.0);
+src/mAmount:Settings.cpp:                mExtSettings->mUDPRate = kDefault_UDPRate;
+src/mAmount:Settings.cpp:                mExtSettings->mBufLen = kDefault_UDPBufLen;
+src/mAmount:Settings.cpp:            } else if ( mExtSettings->mBufLen < (int) ( sizeof( UDP_datagram ) 
+src/mAmount:Settings.cpp:            mExtSettings->mTCPWin = byte_atoi(outarg);
+src/mAmount:Settings.cpp:            if ( mExtSettings->mTCPWin < 2048 ) {
+src/mAmount:Settings.cpp:                fprintf( stderr, warn_window_small, mExtSettings->mTCPWin );
+src/mAmount:Settings.cpp:                    mExtSettings->mReportMode = kReport_CSV;
+src/mAmount:Settings.cpp:            mExtSettings->mLocalhost = new char[ strlen( optarg ) + 1 ];
+src/mAmount:Settings.cpp:            strcpy( mExtSettings->mLocalhost, optarg );
+src/mAmount:Settings.cpp:            SockAddr_setHostname( mExtSettings->mLocalhost, &temp,
+src/mAmount:Settings.cpp:            if ( mExtSettings->mMode != kTest_Normal ) {
+src/mAmount:Settings.cpp:                        ( mExtSettings->mMode == kTest_DualTest ?
+src/mAmount:Settings.cpp:                mExtSettings->mMode = kTest_Normal;
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mFileName = new char[strlen(optarg)+1];
+src/mAmount:Settings.cpp:            strcpy( mExtSettings->mFileName, optarg);
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mFileName = new char[strlen("<stdin>")+1];
+src/mAmount:Settings.cpp:            strcpy( mExtSettings->mFileName,"<stdin>");
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/mAmount:Settings.cpp:            mExtSettings->mListenPort = atoi( optarg );
+src/mAmount:Settings.cpp:            mExtSettings->mMSS = byte_atoi( outarg );
+src/mAmount:Settings.cpp:            mExtSettings->mThreads = atoi( optarg );
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Server ) {
+src/mAmount:Settings.cpp:                mExtSettings->mThreads = atoi( optarg );
+src/mAmount:Settings.cpp:            mExtSettings->mTOS = strtol( optarg, NULL, 0 );
+src/mAmount:Settings.cpp:            mExtSettings->mTTL = atoi( optarg );
+src/mAmount:Settings.cpp:            if ( mExtSettings->mThreadMode == kMode_Server 
+src/mAmount:Settings.cpp:                 && mExtSettings->mLocalhost != NULL ) {
+src/mAmount:Settings.cpp:                SockAddr_setHostname( mExtSettings->mLocalhost, &temp, 1);
+src/mAmount:Settings.cpp:            } else if ( mExtSettings->mThreadMode == kMode_Client ) {
+src/mAmount:Settings.cpp:                SockAddr_setHostname( mExtSettings->mHost, &temp, 1 );
+src/mAmount:Settings.cpp:	    mExtSettings->mCongestion = new char[strlen(optarg)+1];
+src/mAmount:Settings.cpp:	    strcpy( mExtSettings->mCongestion, optarg);
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mUDPRate = byte_atoi(outarg);
+src/Settings.cpp:                mExtSettings->mBufLen = kDefault_UDPBufLen;
+src/Settings.cpp:            mExtSettings->mHost = new char[ strlen( optarg ) + 1 ];
+src/Settings.cpp:            strcpy( mExtSettings->mHost, optarg );
+src/Settings.cpp:            if ( mExtSettings->mThreadMode == kMode_Unknown ) {
+src/Settings.cpp:                SockAddr_setHostname( mExtSettings->mHost, &temp,
+src/Settings.cpp:                mExtSettings->mThreadMode = kMode_Client;
+src/Settings.cpp:                mExtSettings->mThreads = 1;
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mMode = kTest_DualTest;
+src/Settings.cpp:            mExtSettings->mMode = kTest_TradeOff;
+src/Settings.cpp:            mExtSettings->mFormat = (*optarg);
+src/Settings.cpp:            mExtSettings->mInterval = atof( optarg );
+src/Settings.cpp:            if ( mExtSettings->mInterval < 0.5 ) {
+src/Settings.cpp:                fprintf (stderr, report_interval_small, mExtSettings->mInterval);
+src/Settings.cpp:                mExtSettings->mInterval = 0.5;
+src/Settings.cpp:            mExtSettings->mBufLen = byte_atoi( outarg );
+src/Settings.cpp:                 if ( mExtSettings->mBufLen < (int) sizeof( client_hdr ) &&
+src/Settings.cpp:                if ( mExtSettings->mBufLen < (int) sizeof( UDP_datagram ) ) {
+src/Settings.cpp:                    mExtSettings->mBufLen = sizeof( UDP_datagram );
+src/Settings.cpp:                    fprintf( stderr, warn_buffer_too_small, mExtSettings->mBufLen );
+src/Settings.cpp:                            mExtSettings->mBufLen < (int) ( sizeof( UDP_datagram )
+src/Settings.cpp:            mExtSettings->mAmount = byte_atoi( outarg );
+src/Settings.cpp:            mExtSettings->mOutputFileName = new char[strlen(optarg)+1];
+src/Settings.cpp:            strcpy( mExtSettings->mOutputFileName, optarg);
+src/Settings.cpp:            mExtSettings->mPort = atoi( optarg );
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mMode = kTest_TradeOff;
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Unknown ) {
+src/Settings.cpp:            mExtSettings->mThreadMode = kMode_Listener;
+src/Settings.cpp:            mExtSettings->mAmount = (int) (atof( optarg ) * 100.0);
+src/Settings.cpp:                mExtSettings->mUDPRate = kDefault_UDPRate;
+src/Settings.cpp:                mExtSettings->mBufLen = kDefault_UDPBufLen;
+src/Settings.cpp:            } else if ( mExtSettings->mBufLen < (int) ( sizeof( UDP_datagram ) 
+src/Settings.cpp:            mExtSettings->mTCPWin = byte_atoi(outarg);
+src/Settings.cpp:            if ( mExtSettings->mTCPWin < 2048 ) {
+src/Settings.cpp:                fprintf( stderr, warn_window_small, mExtSettings->mTCPWin );
+src/Settings.cpp:                    mExtSettings->mReportMode = kReport_CSV;
+src/Settings.cpp:            mExtSettings->mLocalhost = new char[ strlen( optarg ) + 1 ];
+src/Settings.cpp:            strcpy( mExtSettings->mLocalhost, optarg );
+src/Settings.cpp:            SockAddr_setHostname( mExtSettings->mLocalhost, &temp,
+src/Settings.cpp:            if ( mExtSettings->mMode != kTest_Normal ) {
+src/Settings.cpp:                        ( mExtSettings->mMode == kTest_DualTest ?
+src/Settings.cpp:                mExtSettings->mMode = kTest_Normal;
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mFileName = new char[strlen(optarg)+1];
+src/Settings.cpp:            strcpy( mExtSettings->mFileName, optarg);
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mFileName = new char[strlen("<stdin>")+1];
+src/Settings.cpp:            strcpy( mExtSettings->mFileName,"<stdin>");
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Client ) {
+src/Settings.cpp:            mExtSettings->mListenPort = atoi( optarg );
+src/Settings.cpp:            mExtSettings->mMSS = byte_atoi( outarg );
+src/Settings.cpp:            mExtSettings->mThreads = atoi( optarg );
+src/Settings.cpp:            if ( mExtSettings->mThreadMode != kMode_Server ) {
+src/Settings.cpp:                mExtSettings->mThreads = atoi( optarg );
+src/Settings.cpp:            mExtSettings->mTOS = strtol( optarg, NULL, 0 );
+src/Settings.cpp:            mExtSettings->mTTL = atoi( optarg );
+src/Settings.cpp:            if ( mExtSettings->mThreadMode == kMode_Server 
+src/Settings.cpp:                 && mExtSettings->mLocalhost != NULL ) {
+src/Settings.cpp:                SockAddr_setHostname( mExtSettings->mLocalhost, &temp, 1);
+src/Settings.cpp:            } else if ( mExtSettings->mThreadMode == kMode_Client ) {
+src/Settings.cpp:                SockAddr_setHostname( mExtSettings->mHost, &temp, 1 );
+src/Settings.cpp:	    mExtSettings->mCongestion = new char[strlen(optarg)+1];
+src/Settings.cpp:	    strcpy( mExtSettings->mCongestion, optarg);

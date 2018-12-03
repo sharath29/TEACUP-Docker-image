@@ -1,0 +1,1 @@
+cmd_/home/student/Documents/TEACUP/teacup/tools/ttprobe-0.1.2/ttprobe.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/student/Documents/TEACUP/teacup/tools/ttprobe-0.1.2/ttprobe.ko /home/student/Documents/TEACUP/teacup/tools/ttprobe-0.1.2/ttprobe.o /home/student/Documents/TEACUP/teacup/tools/ttprobe-0.1.2/ttprobe.mod.o ;  true

@@ -1,0 +1,10 @@
+Changelog:
+------------
+v0.1.2
+- Fixed: Kernel panic when sending command to ttprobe module. 
+
+v0.1.1
+	- Fixed: wrong ssthresh, rwnd and swnd scaling. 
+
+v0.1
+- First public version

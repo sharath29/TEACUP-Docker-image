@@ -1,0 +1,42 @@
+src/Client.cpp:    reportstruct->packetID = 0;
+src/Client.cpp:    	    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Client.cpp:            reportstruct->packetLen = currLen;
+src/Client.cpp:    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Client.cpp:        reportstruct->packetLen = totLen;
+src/Client.cpp:    reportstruct->packetID = 0;
+src/Client.cpp:        gettimeofday( &(reportstruct->packetTime), NULL );
+src/Client.cpp:            mBuf_UDP->id      = htonl( (reportstruct->packetID)++ ); 
+src/Client.cpp:            mBuf_UDP->tv_sec  = htonl( reportstruct->packetTime.tv_sec ); 
+src/Client.cpp:            mBuf_UDP->tv_usec = htonl( reportstruct->packetTime.tv_usec );
+src/Client.cpp:            adjust = delay_target + lastPacketTime.subUsec( reportstruct->packetTime ); 
+src/Client.cpp:            lastPacketTime.set( reportstruct->packetTime.tv_sec, 
+src/Client.cpp:                                reportstruct->packetTime.tv_usec ); 
+src/Client.cpp:        reportstruct->packetLen = currLen;
+src/Client.cpp:                 (mMode_Time   &&  mEndTime.before( reportstruct->packetTime ))  || 
+src/Client.cpp:    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Client.cpp:        mBuf_UDP->id      = htonl( -(reportstruct->packetID)  ); 
+src/Client.cpp:        mBuf_UDP->tv_sec  = htonl( reportstruct->packetTime.tv_sec ); 
+src/Client.cpp:        mBuf_UDP->tv_usec = htonl( reportstruct->packetTime.tv_usec ); 
+src/Listener.cpp:                    reportstruct->packetID = datagramID; 
+src/Listener.cpp:                    reportstruct->sentTime.tv_sec = ntohl( ((UDP_datagram*) mBuf)->tv_sec  );
+src/Listener.cpp:                    reportstruct->sentTime.tv_usec = ntohl( ((UDP_datagram*) mBuf)->tv_usec ); 
+src/Listener.cpp:                    reportstruct->packetLen = rc;
+src/Listener.cpp:                    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Listener.cpp:                    reportstruct->packetID = -datagramID; 
+src/Listener.cpp:                    reportstruct->sentTime.tv_sec = ntohl( ((UDP_datagram*) mBuf)->tv_sec  );
+src/Listener.cpp:                    reportstruct->sentTime.tv_usec = ntohl( ((UDP_datagram*) mBuf)->tv_usec ); 
+src/Listener.cpp:                    reportstruct->packetLen = rc;
+src/Listener.cpp:                    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Listener.cpp:                    gettimeofday( &(reportstruct->packetTime), NULL );
+src/Server.cpp:        reportstruct->packetID = 0;
+src/Server.cpp:                reportstruct->packetID = ntohl( mBuf_UDP->id ); 
+src/Server.cpp:                reportstruct->sentTime.tv_sec = ntohl( mBuf_UDP->tv_sec  );
+src/Server.cpp:                reportstruct->sentTime.tv_usec = ntohl( mBuf_UDP->tv_usec ); 
+src/Server.cpp:		reportstruct->packetLen = currLen;
+src/Server.cpp:		gettimeofday( &(reportstruct->packetTime), NULL );
+src/Server.cpp:            if ( reportstruct->packetID < 0 ) {
+src/Server.cpp:                reportstruct->packetID = -reportstruct->packetID;
+src/Server.cpp:                reportstruct->packetLen = currLen;
+src/Server.cpp:                gettimeofday( &(reportstruct->packetTime), NULL );
+src/Server.cpp:        gettimeofday( &(reportstruct->packetTime), NULL );
+src/Server.cpp:                        reportstruct->packetLen = totLen;

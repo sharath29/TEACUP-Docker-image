@@ -1,0 +1,18 @@
+sudo su
+sudo iptables -t nat -A POSTROUTING -o enx000000000f92 -j MASQUERADE
+sudo iptables -A FORWARD -i enx000000000f92 -o eno1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i eno1 -o enx000000000f92 -j ACCEPT 
+sudo iptables -A FORWARD -i eno1 -j ACCEPT
+sudo iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables-save > /etc/iptable.rules
+
+
+sudo ifdown --all
+sudo ifup --all
+sudo service networking-stop
+sudo service networking-start
+sudo service network-manager stop
+sudo service network-manager start
+
+eno1
+enx000000000f92

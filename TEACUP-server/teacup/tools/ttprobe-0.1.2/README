@@ -1,0 +1,51 @@
+
+ttprobe v0.1.2
+------------
+ ttprobe (TEACUP TCP Probe) is a TCP states logger for Linux to be used with 
+ CAIA's TCP Experiment Automation Controlled Using Python (TEACUP)
+ https://sourceforge.net/projects/teacup/
+ http://www.caia.swin.edu.au/tools/teacup
+
+ For more information and documentation of ttprobe v0.1.2, read technical report
+ CAIA-TR-150911A <http://caia.swin.edu.au/reports/150911A/CAIA-TR-150911A.pdf>
+
+ttprobe Installation
+--------------------
+ Do the following steps as super user (root):
+
+  1. Install software dependencies (make, gcc and kernel-devel and/or 
+     linux-headers). See section 6 of technical report CAIA-TR-150911A for
+      more detailes.
+  2. Extract ttprobe archive file
+	> tar xzvf ttprobe-0.1.2.tar.gz
+  3. Compile the module.
+	> cd ttprobe-0.1.2
+	> make
+  4. Copy ttprobe kernel module to Linux kernel modules directory.
+	> mkdir -p /lib/modules/$(uname -r)/extra
+	> cp -r ttprobe.ko /lib/modules/$(uname -r)/extra/	
+  5. Update modules dependency descriptions.
+	> depmod $(uname -r)
+
+ttprobe module usage 
+--------------------
+ ttprobe can be used without TEACUP as follow:
+
+ Load the module: 
+	modprobe ttprobe port=0 full=1
+
+ Then:
+ To log TCP states from the kernel to a file, you can use:
+	cat /proc/net/ttprobe > myttprobe.log &
+
+ To flush the buffer:
+	echo "flush" > /proc/net/ttprobe
+
+ To send EOF to the reading process:
+	 echo "finsih" > /proc/net/ttprobe
+
+ Unload the module:
+	rmmod ttprobe
+
+ More information and other options can be found in the technical report 
+ CAIA-TR-150911A.

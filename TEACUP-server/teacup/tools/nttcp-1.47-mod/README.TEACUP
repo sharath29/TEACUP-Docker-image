@@ -1,0 +1,10 @@
+This is a modified version of nttcp 1.47 
+for CAIA's TCP Experiment Automation Controlled Using Python (TEACUP)
+(http://www.caia.swin.edu.au/tools/teacup).
+
+It has the following modifications:
+- modified timeout value when checking the TCP socket
+  (changed from 10s to 1s, because otherwise it could cause 10s delay 
+   at the start of an experiment)
+
+Author: Sebastian Zander (szander@swin.edu.au)
